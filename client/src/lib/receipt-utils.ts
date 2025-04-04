@@ -134,18 +134,26 @@ function convertNumberToWords(num: number, units: string[], teens: string[], ten
 // Generate PDF from receipt preview
 export async function generatePdf(): Promise<void> {
   try {
+    console.log('Starting PDF generation...');
     const receiptElement = document.getElementById('receipt-preview');
-    if (!receiptElement) return;
+    if (!receiptElement) {
+      console.error('Receipt element not found');
+      return;
+    }
     
+    console.log('Creating canvas...');
     // Create instance of jsPDF
     const canvas = await html2canvas(receiptElement, {
       scale: 2, // Higher scale for better quality
       useCORS: true, // Enable CORS for images
-      logging: false, // Disable logging
+      logging: true, // Enable logging for debugging
       backgroundColor: '#ffffff' // White background
     });
     
+    console.log('Canvas created, generating image data...');
     const imgData = canvas.toDataURL('image/png');
+    
+    console.log('Creating PDF document...');
     const pdf = new jsPDF({
       orientation: 'portrait',
       unit: 'mm',
@@ -155,12 +163,21 @@ export async function generatePdf(): Promise<void> {
     const imgWidth = 210; // A4 width in mm
     const imgHeight = (canvas.height * imgWidth) / canvas.width;
     
+    console.log('Adding image to PDF...');
     // Add image to PDF
     pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
     
+    console.log('Saving PDF file...');
     // Save the PDF file
     pdf.save('recibo.pdf');
+    console.log('PDF saved successfully');
   } catch (error) {
     console.error('Error generating PDF:', error);
+    // Log more details about the error
+    if (error instanceof Error) {
+      console.error('Error name:', error.name);
+      console.error('Error message:', error.message);
+      console.error('Error stack:', error.stack);
+    }
   }
 }

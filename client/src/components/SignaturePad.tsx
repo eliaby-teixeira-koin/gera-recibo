@@ -88,8 +88,32 @@ export default function SignaturePad({ value, onChange }: SignaturePadProps) {
   };
   
   // Touch event handlers for mobile
+  // Esta variável será usada para armazenar o elemento pai que receberá a classe no-scroll
+  const signaturePadContainerRef = useRef<HTMLDivElement | null>(null);
+  
+  const preventScrollOnBody = () => {
+    // Adiciona classe no elemento pai (ou body se não encontrar)
+    if (canvasRef.current) {
+      // Encontra o elemento div pai mais próximo
+      const container = canvasRef.current.closest('div');
+      if (container) {
+        container.classList.add('no-scroll');
+        signaturePadContainerRef.current = container;
+      }
+    }
+  };
+  
+  const restoreScrollOnBody = () => {
+    // Remove classe do elemento pai
+    if (signaturePadContainerRef.current) {
+      signaturePadContainerRef.current.classList.remove('no-scroll');
+    }
+  };
+  
   const handleTouchStart = (e: React.TouchEvent<HTMLCanvasElement>) => {
-    e.preventDefault();
+    e.preventDefault(); // Previne o comportamento padrão
+    preventScrollOnBody(); // Impede rolagem durante a assinatura
+    
     setIsDrawing(true);
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext('2d');
@@ -106,7 +130,7 @@ export default function SignaturePad({ value, onChange }: SignaturePadProps) {
   };
   
   const handleTouchMove = (e: React.TouchEvent<HTMLCanvasElement>) => {
-    e.preventDefault();
+    e.preventDefault(); // Previne o comportamento padrão
     if (!isDrawing) return;
     
     const canvas = canvasRef.current;
@@ -123,7 +147,9 @@ export default function SignaturePad({ value, onChange }: SignaturePadProps) {
   };
   
   const handleTouchEnd = (e: React.TouchEvent<HTMLCanvasElement>) => {
-    e.preventDefault();
+    e.preventDefault(); // Previne o comportamento padrão
+    restoreScrollOnBody(); // Restaura rolagem após terminar a assinatura
+    
     if (isDrawing) {
       setIsDrawing(false);
       saveSignature();
@@ -150,10 +176,12 @@ export default function SignaturePad({ value, onChange }: SignaturePadProps) {
   
   return (
     <div className="border border-gray-300 rounded-md p-2">
+      {/* Área de assinatura com touchAction: none para prevenir gestos de toque no mobile */}
       <div className="w-full h-32 border border-gray-200 rounded-md bg-white cursor-crosshair">
         <canvas
           ref={canvasRef}
           className="w-full h-full"
+          style={{ touchAction: 'none' }}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
@@ -161,6 +189,7 @@ export default function SignaturePad({ value, onChange }: SignaturePadProps) {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
+          onTouchCancel={handleTouchEnd}
         />
       </div>
       <div className="flex justify-end mt-2">

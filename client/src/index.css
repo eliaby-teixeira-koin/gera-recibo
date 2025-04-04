@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Classes personalizadas */
+.no-scroll {
+  touch-action: none;
+  overflow: hidden;
+  position: relative;
+}
+
 @layer base {
   * {
     @apply border-border;

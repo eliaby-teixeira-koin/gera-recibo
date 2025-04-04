@@ -46,23 +46,23 @@ export const Logo: React.FC<LogoProps> = ({
       {/* App Icon - Rounded square com gradient mais próximo da imagem de referência */}
       <rect x="10" y="10" width="50" height="50" rx="12" fill="url(#logoIconGradient)" />
       
-      {/* Document icon with folded corner - centralizado com padding */}
+      {/* Document icon with folded corner - menor e com mais padding */}
       <path 
-        d="M18 17 L42 17 L52 27 L52 53 L18 53 Z" 
+        d="M20 20 L40 20 L47 27 L47 50 L20 50 Z" 
         fill="white" 
       />
       <path 
-        d="M42 17 L42 27 L52 27" 
+        d="M40 20 L40 27 L47 27" 
         fill="#e6e6e6" 
         stroke="#00AEEF" 
         strokeWidth="0.5"
       />
       
       {/* Lines in document */}
-      <line x1="22" y1="32" x2="48" y2="32" stroke="#00AEEF" strokeWidth="1.5" />
-      <line x1="22" y1="39" x2="48" y2="39" stroke="#00AEEF" strokeWidth="1.5" />
-      <line x1="22" y1="46" x2="48" y2="46" stroke="#00AEEF" strokeWidth="1.5" />
-      <line x1="22" y1="50" x2="38" y2="50" stroke="#00AEEF" strokeWidth="1" />
+      <line x1="23" y1="30" x2="44" y2="30" stroke="#00AEEF" strokeWidth="1.5" />
+      <line x1="23" y1="35" x2="44" y2="35" stroke="#00AEEF" strokeWidth="1.5" />
+      <line x1="23" y1="40" x2="44" y2="40" stroke="#00AEEF" strokeWidth="1.5" />
+      <line x1="23" y1="45" x2="36" y2="45" stroke="#00AEEF" strokeWidth="1" />
       
       {/* Text logo with proper spacing and centered vertical alignment */}
       <g>
@@ -110,23 +110,23 @@ export const SocialShareImage: React.FC = () => {
         {/* App Icon - Rounded square with gradient (larger version) */}
         <rect x="0" y="0" width="150" height="150" rx="30" fill="url(#socialIconGradient)" />
         
-        {/* Document icon with folded corner - centralizado com padding igual ao favicon */}
+        {/* Document icon with folded corner - menor e com mais padding */}
         <path 
-          d="M25 25 L95 25 L125 55 L125 125 L25 125 Z" 
+          d="M35 35 L85 35 L115 65 L115 115 L35 115 Z" 
           fill="white" 
         />
         <path 
-          d="M95 25 L95 55 L125 55" 
+          d="M85 35 L85 65 L115 65" 
           fill="#e6e6e6" 
           stroke="#00AEEF" 
           strokeWidth="1"
         />
         
         {/* Lines in document */}
-        <line x1="35" y1="70" x2="115" y2="70" stroke="#00AEEF" strokeWidth="3" />
-        <line x1="35" y1="85" x2="115" y2="85" stroke="#00AEEF" strokeWidth="3" />
-        <line x1="35" y1="100" x2="115" y2="100" stroke="#00AEEF" strokeWidth="3" />
-        <line x1="35" y1="115" x2="90" y2="115" stroke="#00AEEF" strokeWidth="2" />
+        <line x1="45" y1="75" x2="105" y2="75" stroke="#00AEEF" strokeWidth="3" />
+        <line x1="45" y1="85" x2="105" y2="85" stroke="#00AEEF" strokeWidth="3" />
+        <line x1="45" y1="95" x2="105" y2="95" stroke="#00AEEF" strokeWidth="3" />
+        <line x1="45" y1="105" x2="80" y2="105" stroke="#00AEEF" strokeWidth="2" />
         
         {/* Text logo - larger size */}
         <text x="180" y="85" fontFamily="Arial, sans-serif" fontSize="80" fontWeight="bold" fill="#00AEEF">

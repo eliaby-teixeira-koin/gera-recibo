@@ -36,6 +36,7 @@ export default function Home() {
   const [showPreview, setShowPreview] = useState(false);
   
   // Verificar se todos os campos obrigatórios estão preenchidos
+  // Logo é opcional e não deve ser considerado na validação
   const isFormValid = () => {
     return (
       receiptData.name.trim() !== "" &&

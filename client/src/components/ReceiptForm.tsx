@@ -118,13 +118,35 @@ export default function ReceiptForm({ receiptData, onUpdate, onPreview }: Receip
         return;
       }
 
+      // Update the receipt data with form values
       onUpdate(values);
+      
+      // Ensure the preview is visible
       onPreview();
       
-      // Small delay to ensure the preview is updated
+      // Use a slightly longer delay to ensure the preview is fully rendered
+      toast({
+        title: "Gerando PDF",
+        description: "Aguarde enquanto seu PDF está sendo gerado...",
+      });
+      
       setTimeout(() => {
-        generatePdf();
-      }, 300);
+        try {
+          generatePdf();
+          toast({
+            title: "PDF gerado com sucesso",
+            description: "O download do seu recibo em PDF foi iniciado",
+            variant: "default",
+          });
+        } catch (error) {
+          console.error("Erro ao gerar PDF:", error);
+          toast({
+            title: "Erro ao gerar PDF",
+            description: "Ocorreu um erro ao gerar o PDF. Por favor, tente novamente.",
+            variant: "destructive",
+          });
+        }
+      }, 500);
     })();
   };
 

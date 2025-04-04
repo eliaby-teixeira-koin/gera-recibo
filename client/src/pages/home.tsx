@@ -89,8 +89,14 @@ export default function Home() {
     <div className="bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4 py-8">
         <header className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 text-center">Gerador de Recibos</h1>
-          <p className="text-center text-gray-600 mt-2">Crie e exporte recibos profissionais em PDF</p>
+          <div className="flex flex-col items-center justify-center">
+            <img 
+              src="/images/gera-recibo-logo.svg" 
+              alt="Gera Recibo" 
+              className="h-16 mb-3" 
+            />
+            <p className="text-center text-gray-600 mt-1">Crie e exporte recibos profissionais em PDF</p>
+          </div>
         </header>
 
         <div className="block lg:hidden mb-6">

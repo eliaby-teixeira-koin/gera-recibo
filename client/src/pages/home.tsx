@@ -101,31 +101,35 @@ export default function Home() {
             </TabsList>
             <TabsContent value="form">
               <Card className="mt-2">
-                <ReceiptForm 
-                  receiptData={receiptData}
-                  onUpdate={handleReceiptUpdate}
-                  onPreview={handlePreviewClick}
-                />
+                <div className="p-4 sm:p-6">
+                  <ReceiptForm 
+                    receiptData={receiptData}
+                    onUpdate={handleReceiptUpdate}
+                    onPreview={handlePreviewClick}
+                  />
+                </div>
               </Card>
             </TabsContent>
             <TabsContent value="preview">
               <Card className="mt-2 relative">
-                <ReceiptPreview 
-                  data={receiptData}
-                  showPlaceholder={!showPreview}
-                />
-                
-                {/* Botão para voltar ao formulário no mobile */}
-                {isMobile && (
-                  <div className="mt-4">
-                    <button 
-                      onClick={() => setActiveTab("form")} 
-                      className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md w-full"
-                    >
-                      Voltar para o Formulário
-                    </button>
-                  </div>
-                )}
+                <div className="p-4 sm:p-6">
+                  <ReceiptPreview 
+                    data={receiptData}
+                    showPlaceholder={!showPreview}
+                  />
+                  
+                  {/* Botão para voltar ao formulário no mobile */}
+                  {isMobile && (
+                    <div className="mt-6 mb-2">
+                      <button 
+                        onClick={() => setActiveTab("form")} 
+                        className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md w-full"
+                      >
+                        Voltar para o Formulário
+                      </button>
+                    </div>
+                  )}
+                </div>
               </Card>
             </TabsContent>
           </Tabs>

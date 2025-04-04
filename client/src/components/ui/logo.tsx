@@ -34,11 +34,11 @@ export const Logo: React.FC = () => {
       <line x1="26" y1="40" x2="44" y2="40" stroke="#009dd9" strokeWidth="1.5" />
       <line x1="26" y1="46" x2="38" y2="46" stroke="#009dd9" strokeWidth="1" />
       
-      {/* Text logo with more spacing */}
+      {/* Text logo with appropriate spacing */}
       <text x="70" y="42" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold" fill="#009dd9">
         Gera
       </text>
-      <text x="158" y="42" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold" fill="#1f2937">
+      <text x="140" y="42" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold" fill="#1f2937">
         Recibo
       </text>
     </svg>

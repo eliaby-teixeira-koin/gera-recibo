@@ -35,11 +35,12 @@ export const Logo: React.FC = () => {
       <line x1="26" y1="46" x2="38" y2="46" stroke="#009dd9" strokeWidth="1" />
       
       {/* Text logo with proper spacing and centered vertical alignment */}
-      <g transform="translate(0, 5)">
-        <text x="70" y="35" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold" fill="#009dd9">
+      <g>
+        {/* Centrando os textos na altura do ícone (que tem 50px de altura e começa em y=10) */}
+        <text x="70" y="37" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold" fill="#009dd9" dominant-baseline="central" text-anchor="start">
           Gera
         </text>
-        <text x="148" y="35" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold" fill="#1f2937">
+        <text x="148" y="37" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold" fill="#1f2937" dominant-baseline="central" text-anchor="start">
           Recibo
         </text>
       </g>

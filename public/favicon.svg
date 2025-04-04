@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="8" fill="white" />
-  <rect x="14" y="10" width="36" height="44" rx="4" fill="#f7f7f7" stroke="#e5e7eb" strokeWidth="1" />
+  <defs>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#8cc63f" />
+      <stop offset="50%" stopColor="#1a6e3d" />
+      <stop offset="100%" stopColor="#009dd9" />
+    </linearGradient>
+  </defs>
   
-  <!-- Document lines -->
-  <line x1="20" y1="20" x2="44" y2="20" stroke="#009dd9" strokeWidth="2" />
-  <line x1="20" y1="28" x2="44" y2="28" stroke="#009dd9" strokeWidth="2" />
-  <line x1="20" y1="36" x2="38" y2="36" stroke="#009dd9" strokeWidth="1.5" />
-  <line x1="20" y1="44" x2="34" y2="44" stroke="#009dd9" strokeWidth="1" />
+  <!-- Rounded square with gradient background identical to the logo -->
+  <rect width="64" height="64" rx="10" fill="url(#iconGradient)" />
+  
+  <!-- Document icon with folded corner -->
+  <path 
+    d="M12 14 L38 14 L52 28 L52 50 L12 50 Z" 
+    fill="white" 
+  />
+  <path 
+    d="M38 14 L38 28 L52 28" 
+    fill="#e6e6e6" 
+    stroke="#009dd9" 
+    strokeWidth="0.5"
+  />
+  
+  <!-- Lines in document -->
+  <line x1="18" y1="30" x2="46" y2="30" stroke="#009dd9" strokeWidth="1.5" />
+  <line x1="18" y1="36" x2="46" y2="36" stroke="#009dd9" strokeWidth="1.5" />
+  <line x1="18" y1="42" x2="46" y2="42" stroke="#009dd9" strokeWidth="1.5" />
+  <line x1="18" y1="48" x2="34" y2="48" stroke="#009dd9" strokeWidth="1" />
 </svg>

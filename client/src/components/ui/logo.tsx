@@ -110,22 +110,23 @@ export const SocialShareImage: React.FC = () => {
         {/* App Icon - Rounded square with gradient (larger version) */}
         <rect x="0" y="0" width="150" height="150" rx="30" fill="url(#socialIconGradient)" />
         
-        {/* Document icon with folded corner - centralizado com padding */}
+        {/* Document icon with folded corner - centralizado com padding igual ao favicon */}
         <path 
-          d="M30 35 L80 35 L120 75 L120 115 L30 115 Z" 
+          d="M25 25 L95 25 L125 55 L125 125 L25 125 Z" 
           fill="white" 
         />
         <path 
-          d="M80 35 L80 75 L120 75" 
+          d="M95 25 L95 55 L125 55" 
           fill="#e6e6e6" 
           stroke="#00AEEF" 
           strokeWidth="1"
         />
         
         {/* Lines in document */}
-        <line x1="40" y1="85" x2="110" y2="85" stroke="#00AEEF" strokeWidth="3" />
-        <line x1="40" y1="95" x2="110" y2="95" stroke="#00AEEF" strokeWidth="3" />
-        <line x1="40" y1="105" x2="90" y2="105" stroke="#00AEEF" strokeWidth="2" />
+        <line x1="35" y1="70" x2="115" y2="70" stroke="#00AEEF" strokeWidth="3" />
+        <line x1="35" y1="85" x2="115" y2="85" stroke="#00AEEF" strokeWidth="3" />
+        <line x1="35" y1="100" x2="115" y2="100" stroke="#00AEEF" strokeWidth="3" />
+        <line x1="35" y1="115" x2="90" y2="115" stroke="#00AEEF" strokeWidth="2" />
         
         {/* Text logo - larger size */}
         <text x="180" y="85" fontFamily="Arial, sans-serif" fontSize="80" fontWeight="bold" fill="#00AEEF">

@@ -5,6 +5,7 @@ import ReceiptPreview from "@/components/ReceiptPreview";
 import { useEffect, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useIsMobile } from "@/hooks/use-mobile";
+import Logo from "@/components/ui/logo";
 
 export type ReceiptData = {
   logo?: string;
@@ -90,11 +91,9 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8">
         <header className="mb-8">
           <div className="flex flex-col items-center justify-center">
-            <img 
-              src="/images/gera-recibo-logo.svg" 
-              alt="Gera Recibo" 
-              className="h-16 mb-3" 
-            />
+            <div className="h-16 mb-3">
+              <Logo />
+            </div>
             <p className="text-center text-gray-600 mt-1">Crie e exporte recibos profissionais em PDF</p>
           </div>
         </header>

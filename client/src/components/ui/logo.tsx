@@ -26,15 +26,13 @@ export const Logo: React.FC = () => {
         strokeWidth="0.5"
       />
       
-      {/* Letter G */}
-      <text x="26" y="40" fontFamily="Arial, sans-serif" fontSize="19" fontWeight="bold" fill="#009dd9">
-        G
-      </text>
+      {/* Sem a letra G, apenas o documento com linhas */}
       
       {/* Lines in document */}
-      <line x1="26" y1="30" x2="44" y2="30" stroke="#009dd9" strokeWidth="1.5" />
-      <line x1="26" y1="44" x2="44" y2="44" stroke="#009dd9" strokeWidth="1.5" />
-      <line x1="26" y1="48" x2="38" y2="48" stroke="#009dd9" strokeWidth="1" />
+      <line x1="26" y1="28" x2="44" y2="28" stroke="#009dd9" strokeWidth="1.5" />
+      <line x1="26" y1="34" x2="44" y2="34" stroke="#009dd9" strokeWidth="1.5" />
+      <line x1="26" y1="40" x2="44" y2="40" stroke="#009dd9" strokeWidth="1.5" />
+      <line x1="26" y1="46" x2="38" y2="46" stroke="#009dd9" strokeWidth="1" />
       
       {/* Text logo with more spacing */}
       <text x="70" y="42" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold" fill="#009dd9">

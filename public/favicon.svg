@@ -2,30 +2,31 @@
 <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#8cc63f" />
-      <stop offset="50%" stopColor="#1a6e3d" />
-      <stop offset="100%" stopColor="#009dd9" />
+      <stop offset="0%" stop-color="#8cc63f" />
+      <stop offset="35%" stop-color="#006837" />
+      <stop offset="100%" stop-color="#00AEEF" />
     </linearGradient>
   </defs>
   
   <!-- Rounded square with gradient background identical to the logo -->
-  <rect width="64" height="64" rx="10" fill="url(#iconGradient)" />
+  <rect width="64" height="64" rx="12" fill="url(#iconGradient)" />
   
-  <!-- Document icon with folded corner -->
+  <!-- G maiúsculo -->
+  <text x="20" y="32" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">
+    G
+  </text>
+  
+  <!-- Document icon -->
   <path 
-    d="M12 14 L38 14 L52 28 L52 50 L12 50 Z" 
+    d="M30 14 L52 14 L52 50 L30 50 Z" 
     fill="white" 
-  />
-  <path 
-    d="M38 14 L38 28 L52 28" 
-    fill="#e6e6e6" 
-    stroke="#009dd9" 
-    strokeWidth="0.5"
+    stroke="#00AEEF"
+    stroke-width="1"
   />
   
   <!-- Lines in document -->
-  <line x1="18" y1="30" x2="46" y2="30" stroke="#009dd9" strokeWidth="1.5" />
-  <line x1="18" y1="36" x2="46" y2="36" stroke="#009dd9" strokeWidth="1.5" />
-  <line x1="18" y1="42" x2="46" y2="42" stroke="#009dd9" strokeWidth="1.5" />
-  <line x1="18" y1="48" x2="34" y2="48" stroke="#009dd9" strokeWidth="1" />
+  <line x1="34" y1="22" x2="48" y2="22" stroke="#00AEEF" stroke-width="1.5" />
+  <line x1="34" y1="30" x2="48" y2="30" stroke="#00AEEF" stroke-width="1.5" />
+  <line x1="34" y1="38" x2="48" y2="38" stroke="#00AEEF" stroke-width="1.5" />
+  <line x1="34" y1="46" x2="44" y2="46" stroke="#00AEEF" stroke-width="1" />
 </svg>

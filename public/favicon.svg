@@ -10,21 +10,21 @@
   <!-- App Icon - Rounded square com gradient mais próximo da imagem de referência -->
   <rect x="10" y="10" width="50" height="50" rx="12" fill="url(#logoIconGradient)" />
   
-  <!-- Document icon with folded corner - menor e com mais padding -->
+  <!-- Document icon with folded corner - perfeitamente centralizado -->
   <path 
-    d="M20 20 L40 20 L47 27 L47 50 L20 50 Z" 
+    d="M21.5 20 L41.5 20 L48.5 27 L48.5 50 L21.5 50 Z" 
     fill="white" 
   />
   <path 
-    d="M40 20 L40 27 L47 27" 
+    d="M41.5 20 L41.5 27 L48.5 27" 
     fill="#e6e6e6" 
     stroke="#00AEEF" 
     stroke-width="0.5"
   />
   
   <!-- Lines in document -->
-  <line x1="23" y1="30" x2="44" y2="30" stroke="#00AEEF" stroke-width="1.5" />
-  <line x1="23" y1="35" x2="44" y2="35" stroke="#00AEEF" stroke-width="1.5" />
-  <line x1="23" y1="40" x2="44" y2="40" stroke="#00AEEF" stroke-width="1.5" />
-  <line x1="23" y1="45" x2="36" y2="45" stroke="#00AEEF" stroke-width="1" />
+  <line x1="24.5" y1="30" x2="45.5" y2="30" stroke="#00AEEF" stroke-width="1.5" />
+  <line x1="24.5" y1="35" x2="45.5" y2="35" stroke="#00AEEF" stroke-width="1.5" />
+  <line x1="24.5" y1="40" x2="45.5" y2="40" stroke="#00AEEF" stroke-width="1.5" />
+  <line x1="24.5" y1="45" x2="37.5" y2="45" stroke="#00AEEF" stroke-width="1" />
 </svg>

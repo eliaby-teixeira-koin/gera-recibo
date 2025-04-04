@@ -23,24 +23,22 @@
     <!-- App Icon - Rounded square with gradient (larger version) -->
     <rect x="0" y="0" width="150" height="150" rx="30" fill="url(#socialIconGradient)" />
     
-    <!-- G maiúsculo -->
-    <text x="30" y="75" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">
-      G
-    </text>
-    
-    <!-- Document icon -->
+    <!-- Document icon with folded corner -->
     <path 
-      d="M60 40 L110 40 L110 110 L60 110 Z" 
+      d="M25 30 L85 30 L125 70 L125 120 L25 120 Z" 
       fill="white" 
-      stroke="#00AEEF"
-      stroke-width="2"
+    />
+    <path 
+      d="M85 30 L85 70 L125 70" 
+      fill="#e6e6e6" 
+      stroke="#00AEEF" 
+      stroke-width="1"
     />
     
     <!-- Lines in document -->
-    <line x1="70" y1="55" x2="100" y2="55" stroke="#00AEEF" stroke-width="3" />
-    <line x1="70" y1="70" x2="100" y2="70" stroke="#00AEEF" stroke-width="3" />
-    <line x1="70" y1="85" x2="100" y2="85" stroke="#00AEEF" stroke-width="3" />
-    <line x1="70" y1="100" x2="90" y2="100" stroke="#00AEEF" stroke-width="2" />
+    <line x1="40" y1="80" x2="110" y2="80" stroke="#00AEEF" stroke-width="3" />
+    <line x1="40" y1="95" x2="110" y2="95" stroke="#00AEEF" stroke-width="3" />
+    <line x1="40" y1="110" x2="90" y2="110" stroke="#00AEEF" stroke-width="2" />
     
     <!-- Text logo - larger size -->
     <text x="180" y="85" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#00AEEF">

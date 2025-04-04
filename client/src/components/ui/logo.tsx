@@ -46,24 +46,23 @@ export const Logo: React.FC<LogoProps> = ({
       {/* App Icon - Rounded square com gradient mais próximo da imagem de referência */}
       <rect x="10" y="10" width="50" height="50" rx="12" fill="url(#logoIconGradient)" />
       
-      {/* G maiúsculo e documento com linhas */}
-      <text x="21" y="37" fontFamily="Arial, sans-serif" fontSize="20" fontWeight="bold" fill="white" dominantBaseline="central">
-        G
-      </text>
-      
       {/* Document icon with folded corner */}
       <path 
-        d="M30 23 L45 23 L45 47 L30 47 Z" 
+        d="M18 16 L35 16 L42 23 L42 44 L18 44 Z" 
         fill="white" 
-        stroke="#00AEEF"
-        strokeWidth="1"
+      />
+      <path 
+        d="M35 16 L35 23 L42 23" 
+        fill="#e6e6e6" 
+        stroke="#00AEEF" 
+        strokeWidth="0.5"
       />
       
       {/* Lines in document */}
-      <line x1="32" y1="28" x2="43" y2="28" stroke="#00AEEF" strokeWidth="1.5" />
-      <line x1="32" y1="33" x2="43" y2="33" stroke="#00AEEF" strokeWidth="1.5" />
-      <line x1="32" y1="38" x2="43" y2="38" stroke="#00AEEF" strokeWidth="1.5" />
-      <line x1="32" y1="43" x2="40" y2="43" stroke="#00AEEF" strokeWidth="1" />
+      <line x1="22" y1="28" x2="38" y2="28" stroke="#00AEEF" strokeWidth="1.5" />
+      <line x1="22" y1="33" x2="38" y2="33" stroke="#00AEEF" strokeWidth="1.5" />
+      <line x1="22" y1="38" x2="38" y2="38" stroke="#00AEEF" strokeWidth="1.5" />
+      <line x1="22" y1="42" x2="32" y2="42" stroke="#00AEEF" strokeWidth="1" />
       
       {/* Text logo with proper spacing and centered vertical alignment */}
       <g>
@@ -111,17 +110,16 @@ export const SocialShareImage: React.FC = () => {
         {/* App Icon - Rounded square with gradient (larger version) */}
         <rect x="0" y="0" width="150" height="150" rx="30" fill="url(#socialIconGradient)" />
         
-        {/* G maiúsculo */}
-        <text x="30" y="75" fontFamily="Arial, sans-serif" fontSize="60" fontWeight="bold" fill="white" textAnchor="middle">
-          G
-        </text>
-        
-        {/* Document icon */}
+        {/* Document icon with folded corner */}
         <path 
-          d="M60 40 L110 40 L110 110 L60 110 Z" 
+          d="M25 30 L85 30 L125 70 L125 120 L25 120 Z" 
           fill="white" 
-          stroke="#00AEEF"
-          strokeWidth="2"
+        />
+        <path 
+          d="M85 30 L85 70 L125 70" 
+          fill="#e6e6e6" 
+          stroke="#00AEEF" 
+          strokeWidth="1"
         />
         
         {/* Lines in document */}

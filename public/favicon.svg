@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="8" fill="white" />
+  <rect x="14" y="10" width="36" height="44" rx="4" fill="#f7f7f7" stroke="#e5e7eb" strokeWidth="1" />
+  
+  <!-- Document lines -->
+  <line x1="20" y1="20" x2="44" y2="20" stroke="#009dd9" strokeWidth="2" />
+  <line x1="20" y1="28" x2="44" y2="28" stroke="#009dd9" strokeWidth="2" />
+  <line x1="20" y1="36" x2="38" y2="36" stroke="#009dd9" strokeWidth="1.5" />
+  <line x1="20" y1="44" x2="34" y2="44" stroke="#009dd9" strokeWidth="1" />
+</svg>

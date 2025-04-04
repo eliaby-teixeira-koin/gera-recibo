@@ -23,22 +23,22 @@
     <!-- App Icon - Rounded square with gradient (larger version) -->
     <rect x="0" y="0" width="150" height="150" rx="30" fill="url(#socialIconGradient)" />
     
-    <!-- Document icon with folded corner -->
+    <!-- Document icon with folded corner - centralizado -->
     <path 
-      d="M25 30 L85 30 L125 70 L125 120 L25 120 Z" 
+      d="M20 25 L85 25 L130 70 L130 125 L20 125 Z" 
       fill="white" 
     />
     <path 
-      d="M85 30 L85 70 L125 70" 
+      d="M85 25 L85 70 L130 70" 
       fill="#e6e6e6" 
       stroke="#00AEEF" 
       stroke-width="1"
     />
     
     <!-- Lines in document -->
-    <line x1="40" y1="80" x2="110" y2="80" stroke="#00AEEF" stroke-width="3" />
-    <line x1="40" y1="95" x2="110" y2="95" stroke="#00AEEF" stroke-width="3" />
-    <line x1="40" y1="110" x2="90" y2="110" stroke="#00AEEF" stroke-width="2" />
+    <line x1="35" y1="80" x2="115" y2="80" stroke="#00AEEF" stroke-width="3" />
+    <line x1="35" y1="95" x2="115" y2="95" stroke="#00AEEF" stroke-width="3" />
+    <line x1="35" y1="110" x2="95" y2="110" stroke="#00AEEF" stroke-width="2" />
     
     <!-- Text logo - larger size -->
     <text x="180" y="85" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#00AEEF">

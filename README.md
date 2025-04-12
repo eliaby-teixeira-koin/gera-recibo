@@ -91,7 +91,7 @@ O **Gera Recibo** é perfeito para:
 
 ## 👨‍💻 Desenvolvido por
 
-[Eliaby Teixeira](https://eliabyteixeira.com) - Desenvolvedor Full Stack
+[Eliaby Teixeira](https://eliabyteixeira.com) - Desenvolvedor Frontend
 
 ---
 

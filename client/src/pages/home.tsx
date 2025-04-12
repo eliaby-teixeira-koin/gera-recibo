@@ -34,7 +34,7 @@ export default function Home() {
     signature: "",
   });
   const [showPreview, setShowPreview] = useState(false);
-  
+
   // Verificar se todos os campos obrigatórios estão preenchidos
   // Logo é opcional e não deve ser considerado na validação
   const isFormValid = () => {
@@ -53,34 +53,36 @@ export default function Home() {
   const handleReceiptUpdate = (data: Partial<ReceiptData>) => {
     setReceiptData((prev) => ({ ...prev, ...data }));
   };
-  
+
   const handlePreviewClick = () => {
     if (!isFormValid()) {
       toast({
         title: "Formulário incompleto",
-        description: "Por favor, preencha todos os campos obrigatórios antes de visualizar o recibo.",
+        description:
+          "Por favor, preencha todos os campos obrigatórios antes de visualizar o recibo.",
         variant: "destructive",
       });
       return;
     }
-    
+
     setShowPreview(true);
     if (isMobile) {
       setActiveTab("preview");
     }
   };
-  
+
   const handleTabChange = (value: string) => {
     // Se for mobile e tentar mudar para preview, verificar se o formulário está completo
     if (isMobile && value === "preview" && !isFormValid()) {
       toast({
         title: "Formulário incompleto",
-        description: "Por favor, preencha todos os campos obrigatórios antes de visualizar o recibo.",
+        description:
+          "Por favor, preencha todos os campos obrigatórios antes de visualizar o recibo.",
         variant: "destructive",
       });
       return;
     }
-    
+
     setActiveTab(value);
     if (value === "preview" && isFormValid()) {
       setShowPreview(true);
@@ -95,7 +97,9 @@ export default function Home() {
             <div className="h-16 mb-3">
               <Logo />
             </div>
-            <p className="text-center text-gray-600 mt-1">Crie e exporte recibos profissionais em PDF</p>
+            <p className="text-center text-gray-600 mt-1">
+              Crie e exporte recibos profissionais em PDF
+            </p>
           </div>
         </header>
 
@@ -108,7 +112,7 @@ export default function Home() {
             <TabsContent value="form">
               <Card className="mt-2">
                 <div className="p-4 sm:p-6">
-                  <ReceiptForm 
+                  <ReceiptForm
                     receiptData={receiptData}
                     onUpdate={handleReceiptUpdate}
                     onPreview={handlePreviewClick}
@@ -119,16 +123,16 @@ export default function Home() {
             <TabsContent value="preview">
               <Card className="mt-2 relative">
                 <div className="p-4 sm:p-6">
-                  <ReceiptPreview 
+                  <ReceiptPreview
                     data={receiptData}
                     showPlaceholder={!showPreview}
                   />
-                  
+
                   {/* Botão para voltar ao formulário no mobile */}
                   {isMobile && (
                     <div className="mt-6 mb-2">
-                      <button 
-                        onClick={() => setActiveTab("form")} 
+                      <button
+                        onClick={() => setActiveTab("form")}
                         className="px-4 py-2 bg-gray-200 text-gray-800 rounded-md w-full"
                       >
                         Voltar para o Formulário
@@ -143,22 +147,32 @@ export default function Home() {
 
         <div className="hidden lg:flex lg:flex-row gap-8">
           <div className="w-full lg:w-1/2 bg-white rounded-lg shadow-md p-6">
-            <ReceiptForm 
+            <ReceiptForm
               receiptData={receiptData}
               onUpdate={handleReceiptUpdate}
               onPreview={handlePreviewClick}
             />
           </div>
           <div className="w-full lg:w-1/2 bg-white rounded-lg shadow-md p-6 relative">
-            <ReceiptPreview 
-              data={receiptData}
-              showPlaceholder={!showPreview}
-            />
+            <ReceiptPreview data={receiptData} showPlaceholder={!showPreview} />
           </div>
         </div>
 
         <footer className="mt-12 text-center text-gray-500 text-sm">
-          <p>© {new Date().getFullYear()} Gerador de Recibos - Todos os direitos reservados</p>
+          <p>
+            © {new Date().getFullYear()} Gerador de Recibos - Todos os direitos
+            reservados
+          </p>
+          <p>
+            <a
+              href="https://eliabyteixeira.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500"
+            >
+              @eliabyteixeira
+            </a>
+          </p>
         </footer>
       </div>
     </div>
